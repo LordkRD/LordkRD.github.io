@@ -1,0 +1,132 @@
+body {
+
+    background-color: rgb(94, 147, 196);
+
+}
+
+.main-contenedor{
+
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+
+}
+
+.titulo-principal{
+    
+    color: red;
+    text-align: center;
+    border: 1px solid black;
+    height: 50px;
+    width: 630px;
+    display: grid;
+    align-content: space-evenly;
+    border-bottom-left-radius: -20px;
+
+}
+
+.contenedor-principal{
+    box-shadow: 5px 5px 10px;
+   
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    background-color: rgb(77, 115, 165);
+    padding-left: 20px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    height: 340px;
+    width: 630px;
+    align-items: flex-end;
+
+}
+
+.contenedor-textoIn{
+    display: grid;
+    height: 320px;
+    width: 320px;
+    
+}
+
+.contenedor-entrada{
+    position: relative;
+}
+
+.contenedor-boton-encriptar{
+    position: relative;
+}
+
+.contenedor-textoOut{
+    position:relative ;
+    display: grid;
+    height: 320px;
+    width: 300px;
+    
+}
+.textIn1{
+
+    
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: black;
+    width: 300px; 
+    height: 300px; 
+    resize: none;
+    border-right: 10%;
+
+}
+
+.textOut1{
+    
+
+    background-color: transparent;
+    border-color: black;
+    border-radius: 5px;
+    width: 300px; 
+    height: 300px; 
+    resize: none;
+   
+
+}
+
+
+
+.botonEncriptar1{
+ 
+    
+    border-radius: 5px;
+    width: 150px; 
+    height: 40px;
+    background-color: blue;
+    
+    
+}
+
+.botonDesencriptar1{
+    
+    
+    border-radius: 5px;
+    width: 150px; 
+    height: 40px;
+    background-color: blue;
+   
+    
+   }
+
+.botonCopiar1{
+
+
+    border-radius: 5px;
+    width: 150px; 
+    height: 40px;
+    background-color: blue;
+   
+   }   
+
+   footer{
+    text-align: center;
+    padding: 3px;
+    color: white;
+   }
