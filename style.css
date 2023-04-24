@@ -1,24 +1,34 @@
 body {
+    
+    background: linear-gradient(to right, #259797,  #af9d84);
+    
+}
 
-    background-color: rgb(94, 147, 196);
+header{
+
+   padding: 10px 0;
 
 }
 
-.main-contenedor{
+.encabezado{
 
-    display: grid;
-    justify-items: center;
-    align-content: space-between;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.titulo{
+    margin: auto;
+}
+
+.titulo p{
+    font-size: 40px;
 }
 
 .titulo-principal{
     
-    color: red;
-    text-align: center;
-    border: 1px solid black;
-    height: 50px;
-    width: 630px;
+    color: black;
     display: grid;
     align-content: space-evenly;
     border-bottom-left-radius: -20px;
@@ -26,107 +36,96 @@ body {
 }
 
 .contenedor-principal{
-    box-shadow: 5px 5px 10px;
    
-    display: flex;
-    position: relative;
-    border: 1px solid black;
-    background-color: rgb(77, 115, 165);
-    padding-left: 20px;
-    padding-bottom: 40px;
-    padding-top: 20px;
-    padding-right: 20px;
-    border-radius: 20px;
-    height: 340px;
-    width: 630px;
-    align-items: flex-end;
-
-}
-
-.contenedor-textoIn{
     display: grid;
-    height: 320px;
-    width: 320px;
-    
+    align-content: space-around;
+    justify-content: space-evenly;
+   
 }
 
-.contenedor-entrada{
-    position: relative;
+.contenedor-principal .contenedor-textarea{
+    display: inline-block;
+    margin: 20 20 20 20;
+    margin-bottom: 40px;
+
 }
 
-.contenedor-boton-encriptar{
-    position: relative;
-}
-
-.contenedor-textoOut{
-    position:relative ;
-    display: grid;
-    height: 320px;
-    width: 300px;
-    
-}
 .textIn1{
 
-    
+    outline: none;
+    text-transform: lowercase;
+    font-size: 20px;
+    box-shadow: -5px 0px 3px;
     background-color: transparent;
     border-radius: 5px;
-    border-color: black;
-    width: 300px; 
-    height: 300px; 
+    border-color: transparent;
+    width: 416px;
+    height: 357px;
     resize: none;
-    border-right: 10%;
-
+    margin-left: 25px;
+    margin-top: 20px;
+  
 }
+textarea::placeholder{
 
-.textOut1{
-    
-
-    background-color: transparent;
-    border-color: black;
-    border-radius: 5px;
-    width: 300px; 
-    height: 300px; 
-    resize: none;
-   
-
-}
-
-
-
-.botonEncriptar1{
- 
-    
-    border-radius: 5px;
-    width: 150px; 
-    height: 40px;
-    background-color: blue;
-    
-    
-}
-
-.botonDesencriptar1{
-    
-    
-    border-radius: 5px;
-    width: 150px; 
-    height: 40px;
-    background-color: blue;
-   
-    
-   }
-
-.botonCopiar1{
-
-
-    border-radius: 5px;
-    width: 150px; 
-    height: 40px;
-    background-color: blue;
-   
-   }   
-
-   footer{
+    font-weight:lighter ;
+    color: black;
     text-align: center;
-    padding: 3px;
+    
+}
+.textOut1{
+
+    background-image: url("Munecosalida.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    text-transform: lowercase;
+    outline: none;
+    font-size: 20px;
+    box-shadow: 5px 0px 3px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: transparent;
+    width: 416px;
+    height: 357px;
+    resize: none;
+    margin-left: 25px;
+    margin-top: 20px; 
+    
+}
+
+.botones1{
+    padding-inline-start: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.botones1 li{
+    
+    text-decoration: none;
+    display: inline-block;
+       
+}
+.botones1 li .botones{
+   margin-left: 8px;
+    border-radius: 5px;
+    width: 140px  ; 
+    height: 40px;
+    background-color: blue;
     color: white;
-   }
+
+}
+
+.botones:hover{
+ 
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px rgb(172, 49, 49);
+    transition: all 0.2s ease;
+  }
+}
+
+footer{
+
+    text-align: center;  
+    color: white;
+
+}

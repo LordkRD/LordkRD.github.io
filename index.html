@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="es">
-    
-    <meta chartset="UTF-8">
-    
-    <head>
+
+<meta chartset="UTF-8">
+
+<head>
 
 
-        <title>Encriptar texto</title>
-        <link rel="stylesheet" href="style.css">
-        <script defer="defer" src="Enciptador.js"></script>
+    <title>Encriptar Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer="defer" src="Enciptador.js"></script>
 
 
-    </head>
-    
-    <body>
+</head>
 
-        <img id="Logo"  src="Vector.png" >
+<body>
 
-        
-        <main>
-       
-            <div class="main-contenedor"> 
-                <header>
-                    <div>
-                        <h1 class="titulo-principal">Encritador</h1>
-                    </div>
-                </header>
-                
-                
-                <div class="contenedor-principal"> 
-                    
-                    <div class="contenedor-textoIn">
-                    
-                        <div class="contenedor-entrada">
-                            <textarea id="textIn" class="textIn1" >Tu texto va aqui</textarea> 
-                        </div>
 
-                        <div class="contenedor-boton-encriptar">
-                            <button id="botonEncriptar" class="botonEncriptar1">Encriptar</button>
-                        </div>
+    <header>
+        <div class="encabezado">
+            <h1><img id="logo" src="logo.png"></h1>
+            <div class="titulo">
+                <p>Encriptador</p>
+            </div>
+        </div>
 
-                    </div>
+    </header>
 
-                    <div class="contenedor-textoOut">
+    <main>
+        <div class="contenedor-principal">
 
-                        <div class="contenedor-salida">
-                            <textarea id ="textOut" class="textOut1" ></textarea>   
-                        </div>        
-                    
-                        <div class="contenedorBotones">
+            <div class="contenedor-textarea">
 
-                            <button id="botonDesencriptar" class="botonDesencriptar1">Desencriptar</button>
-                            <button id="botonCopiar" class="botonCopiar1">Copiar</button>
-                
-                        </div>
-                    </div>    
-                </div>
-                
-                <footer>
-                    <div>
-                    <p>Author: Dinner Hernandez<br>
-                    </div>
-                </footer>
-            </div>    
-        </main>
-    </body>
+                <textarea id="textIn" class="textIn1" placeholder="Escribe algo" autofocus></textarea>
+                <textarea id="textOut" readonly class="textOut1" placeholder="Aqui veras el resultado"></textarea>
+                <ul class="botones1">
+
+                    <li>
+                        <button id="botonEncriptar" class="botones">Encriptar</button>
+                    </li>
+                    <li>
+                        <button id="botonDesencriptar" class="botones">Desencriptar</button>
+                    </li>
+                    <li>
+                        <button id="botonCopiar" class="botones">Copiar</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <p>Autor: Dinner Hernandez<br>
+    </footer>
+</body>
+
 </html>

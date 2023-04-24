@@ -3,44 +3,67 @@ La letra "i" es convertida para "imes"
 La letra "a" es convertida para "ai"
 La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
-*/	
-	
-	function encriptar(){
-		var textIn = document.getElementById("textIn").value;
-		var encriptador = textIn.replace(/e/gi, "enter").replace(/i/gi, "imes").
-		replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
-		
-		var textOut=document.getElementById("textOut").value=encriptador;
-		document.getElementById("textIn").value ="";
+*/
+var codigos = ["enter", "imes", "ai", "ober", "ufat"];
+var vocales = ["e", "i", "a", "o", "u"];
+
+function encriptar() {
+
+	document.getElementById("textIn").focus();
+	var textIn = document.getElementById("textIn").value;
+	var sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // para quitar el acento
+	var sinCaracteres = sinAcento.replace(/[^a-z0-9 ]/g, '');
+	var textDividido = Array.from(sinCaracteres); // para convertir el texto en un array
+
+	if (textDividido == false) {
+		alert("Coloque un texto");
+	} else {
+
+		for (var i = 0; i < textDividido.length; i++) {
+			for (var v = 0; v < vocales.length; v++) {
+				if (textDividido[i] == vocales[v]) {
+					textDividido.splice(i, 1, codigos[v]);
+					var textEncriptado = textDividido.toString().replace(/,/gi, "");
+					var textOut = document.getElementById("textOut").value = textEncriptado;
+					document.getElementById("textOut").style.backgroundImage = 'none';
+					break;
+				} 
+			}
+		}
+
+
+		document.getElementById("textIn").value = "";
 	}
+}
 
-	function desencriptar(){
-		var textOut = document.getElementById("textOut").value;
-		var desencriptador = textOut.replace(/ai/gi,"a").replace(/enter/gi,"e").
-		replace(/imes/gi,"i").replace(/ober/gi,"o").replace(/ufat/gi,"u");
+function desencriptar() {
+	var textIn = document.getElementById("textIn").value;
+	var desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
+		replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+	textOut = document.getElementById("textOut").value = desencriptador;
 
-		textOut=document.getElementById("textOut").value=desencriptador;
-		
-	}
 
-	function copiarTexto(textOut) {
-		var textGuardado = document.createElement("textarea");
-		textGuardado.value = document.getElementById("textOut").value;
-                  
-   		document.body.appendChild(textGuardado);
-    	textGuardado.select();
-   		document.execCommand("copy");
-    	document.body.removeChild(textGuardado);
-		
-	}
 
-	var botonCopiar = document.getElementById("botonCopiar");
-	botonCopiar.onclick=copiarTexto;
-		
-	var botonEncritar = document.getElementById("botonEncriptar");
-	botonEncritar.onclick = encriptar;
+}
 
-	var botonDesencritar = document.getElementById("botonDesencriptar");
-	botonDesencritar.onclick = desencriptar;
-	
-	
+function copiarTexto(textOut) {
+	var textGuardado = document.createElement("textarea");
+	textGuardado.value = document.getElementById("textOut").value;
+
+	document.body.appendChild(textGuardado);
+	textGuardado.select();
+	document.execCommand("copy");
+	document.body.removeChild(textGuardado);
+
+}
+
+
+var botonCopiar = document.getElementById("botonCopiar");
+botonCopiar.onclick = copiarTexto;
+
+var botonEncritar = document.getElementById("botonEncriptar");
+botonEncritar.onclick = encriptar;
+
+var botonDesencritar = document.getElementById("botonDesencriptar");
+botonDesencritar.onclick = desencriptar;
+
