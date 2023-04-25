@@ -49,11 +49,17 @@ function desencriptar() {
 function copiarTexto(textOut) {
 	var textGuardado = document.createElement("textarea");
 	textGuardado.value = document.getElementById("textOut").value;
+	if(textGuardado.value != ""){
+	
 
 	document.body.appendChild(textGuardado);
 	textGuardado.select();
 	document.execCommand("copy");
 	document.body.removeChild(textGuardado);
+	var x = document.getElementById("texto-copiado");
+ 	x.className = "show";
+  	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	}
 
 }
 
