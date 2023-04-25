@@ -29,6 +29,11 @@
         flex-direction: column;
 
     }
+    h1.encabezado #logo{
+        position: fixed;
+        margin-left: 275px;
+        margin-top: -20px;
+    }
 }
 
 body {
