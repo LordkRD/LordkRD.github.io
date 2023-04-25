@@ -1,7 +1,30 @@
 @media (max-width: 914px){
 
     main .botones1{
-        padding-left:  13px;
+        
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    main .contenedor-textarea{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    main .botones1 li .botones{
+        margin-left: 5px;
+        
+     
+     }
+    
+}
+
+@media (max-device-width: 914px){
+
+    main .botones1{
+       
         display: flex;
         justify-content: flex-start;
     }
@@ -13,27 +36,13 @@
 
     }
     
-}
 
-@media (max-device-width: 914px){
-
-    main .botones1{
-        padding-left:  13px;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    main .contenedor-textarea{
-
-        display: flex;
-        flex-direction: column;
-
-    }
-    h1.encabezado #logo{
-        position: fixed;
-        margin-left: 275px;
-        margin-top: -20px;
-    }
+    main .botones1 li .botones{
+        margin-left: 5px;
+        
+     
+     }
+    
 }
 
 body {
