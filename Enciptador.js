@@ -27,7 +27,7 @@ function encriptar() {
 					var textOut = document.getElementById("textOut").value = textEncriptado;
 					document.getElementById("textOut").style.backgroundImage = 'none';
 					break;
-				} 
+				}
 			}
 		}
 
@@ -37,28 +37,29 @@ function encriptar() {
 }
 
 function desencriptar() {
+
 	var textIn = document.getElementById("textIn").value;
 	var desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
 		replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
 	textOut = document.getElementById("textOut").value = desencriptador;
 
-
-
 }
 
 function copiarTexto(textOut) {
+
 	var textGuardado = document.createElement("textarea");
 	textGuardado.value = document.getElementById("textOut").value;
-	if(textGuardado.value != ""){
 	
+	if (textGuardado.value != "") {
 
-	document.body.appendChild(textGuardado);
-	textGuardado.select();
-	document.execCommand("copy");
-	document.body.removeChild(textGuardado);
-	var x = document.getElementById("texto-copiado");
- 	x.className = "show";
-  	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		document.body.appendChild(textGuardado);
+		textGuardado.select();
+		document.execCommand("copy");
+		document.body.removeChild(textGuardado);
+		var x = document.getElementById("texto-copiado");
+		x.className = "show";
+		setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+
 	}
 
 }

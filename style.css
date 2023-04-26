@@ -59,6 +59,8 @@ header{
 
 .encabezado{
 
+    margin-top: 20px;
+    margin-bottom: 11px;
     display: flex;
     position: relative;
     justify-content: flex-start;
@@ -97,6 +99,12 @@ main .contenedor-textarea{
 
 }
 
+.mensaje{
+
+    position: relative;
+    margin-left: 20px;
+    color: white;
+}
 .textIn1{
 
     outline: none;
@@ -176,8 +184,34 @@ textarea::placeholder{
   
 }
 
+#texto-copiado{
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+    font-size: 17px;
+  }
+  
+  #texto-copiado.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
 footer{
 
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;  
     padding-top: 20px;
     padding-bottom: 20px;
