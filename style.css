@@ -6,6 +6,13 @@
         justify-content: flex-start;
     }
 
+    header{
+
+        display: flex;
+        justify-content: center;
+
+    }
+
     main .contenedor-textarea{
 
         display: flex;
@@ -15,13 +22,12 @@
 
     main .botones1 li .botones{
         margin-left: 5px;
-        
-     
      }
+    
     
 }
 
-@media (max-device-width: 914px){
+@media (max-device-width: 480px){
 
     main .botones1{
        
@@ -42,12 +48,19 @@
         
      
      }
+
+    body {
+    
+        
+        
+    }
     
 }
 
 body {
-    
-    background: linear-gradient(to right, #259797,  #af9d84);
+
+    background: linear-gradient( #259797,  #af9d84);
+   
     
 }
 
@@ -186,7 +199,7 @@ textarea::placeholder{
 
 #texto-copiado{
     visibility: hidden;
-    min-width: 250px;
+    min-width: 50px;
     margin-left: -125px;
     background-color: #333;
     color: #fff;
@@ -211,11 +224,10 @@ footer{
     position: relative;
     left: 0;
     bottom: 0;
-    width: 100%;
     text-align: center;  
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 25px;
     color: white;
-    background-color: black;
+   
 }
