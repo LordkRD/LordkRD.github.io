@@ -4,6 +4,8 @@
         
         display: flex;
         justify-content: flex-start;
+        
+
     }
 
     header{
@@ -27,12 +29,13 @@
     
 }
 
-@media (max-device-width: 480px){
+@media (max-device-width: 600px){
 
     main .botones1{
        
         display: flex;
         justify-content: flex-start;
+        width: 30%;
     }
 
     main .contenedor-textarea{
@@ -42,17 +45,29 @@
 
     }
     
-
     main .botones1 li .botones{
         margin-left: 5px;
         
      
-     }
+     
+    }
 
-    body {
-    
+    main .contenedor-textarea .textIn{
+        width: 395px;
+        height: 305px;
+        margin-left: 27px;
+    }
+
+    main .contenedor-textarea .textOut{
+        width: 395px;
+        height: 305px;
         
-        
+    }
+
+    main .contenedor-textarea .mensaje{
+
+        margin-left: 55px;
+
     }
     
 }
@@ -115,10 +130,10 @@ main .contenedor-textarea{
 .mensaje{
 
     position: relative;
-    margin-left: 20px;
+    margin-left: 55px;margin-left: 55px;
     color: white;
 }
-.textIn1{
+.textIn{
 
     outline: none;
     text-transform: lowercase;
@@ -141,7 +156,7 @@ textarea::placeholder{
     text-align: center;
     
 }
-.textOut1{
+.textOut{
 
     background-image: url("Munecosalida.png");
     background-position: center;
