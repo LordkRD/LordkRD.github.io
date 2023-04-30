@@ -29,7 +29,11 @@
     
 }
 
-@media (max-device-width: 483px){
+@media only screen and (max-device-width: 483px){
+
+    header .encabezado{
+        margin-right: 47px;
+    }
 
     main .botones1{
        
@@ -47,26 +51,25 @@
     
     main .botones1 li .botones{
         margin-left: 5px;
-        
-     
-     
     }
 
     main .contenedor-textarea .textIn{
-        width: 395px;
+        width: 321px;
         height: 305px;
-        margin-left: 27px;
+        margin-left: 44px;
     }
 
     main .contenedor-textarea .textOut{
-        width: 395px;
+        width: 321px;
         height: 305px;
-        
+        margin-left: 39px;
+
     }
 
     main .contenedor-textarea .mensaje{
 
-        margin-left: 55px;
+        margin-left: 64px;
+        font-size: smaller;
 
     }
     
@@ -75,7 +78,7 @@
 body {
 
     background: linear-gradient( #259797,  #af9d84);
-   
+    width: 100%;
     
 }
 
