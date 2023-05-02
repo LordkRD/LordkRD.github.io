@@ -1,105 +1,101 @@
-@media (max-width: 914px){
+@media (max-width: 914px) {
 
-    main .botones1{
-        
+    main .botones1 {
+
         display: flex;
         justify-content: flex-start;
-        
+
 
     }
 
-    header{
+    header {
 
         display: flex;
         justify-content: center;
 
     }
 
-    main .contenedor-textarea{
+    main .contenedor-textarea {
 
         display: flex;
         flex-direction: column;
 
     }
 
-    main .botones1 li .botones{
-       
-     }
-    
-    
+
 }
 
-@media only screen and (max-device-width: 375px){
+@media only screen and (max-device-width: 576px) {
 
-   
-    main .botones1{
-       
+
+    main .botones1 {
+
         display: flex;
         justify-content: flex-start;
-        
+
     }
 
-    header .encabezado{
+    header .encabezado {
         margin-top: 0;
     }
 
-    main .contenedor-textarea{
+    main .contenedor-textarea {
 
         display: flex;
         flex-direction: column;
 
     }
-    
-    main .botones1 li .botones{
+
+    main .botones1 li .botones {
         margin-left: 5px;
         width: 105px;
         height: 40px;
     }
 
-    main .contenedor-textarea .textIn{
+    main .contenedor-textarea .textIn {
         width: 321px;
         height: 200px;
         margin-top: 1px;
     }
 
-    main .contenedor-textarea .textOut{
+    main .contenedor-textarea .textOut {
         width: 321px;
         height: 260px;
-        
+
 
     }
 
-    main .contenedor-botones{
+    main .contenedor-botones {
         padding-bottom: 8px;
     }
 
-    main .contenedor-textarea .mensaje{
+    main .contenedor-textarea .mensaje {
 
         text-align: center;
         font-size: smaller;
 
     }
 
-   body footer{
+    body footer {
         padding-bottom: 0px;
     }
-    
+
 }
 
 body {
 
-    background: linear-gradient( #259797,  #af9d84);
+    background: linear-gradient(#259797, #af9d84);
     width: 100%;
-    
-}
-
-header{
-
-   padding: 10px 0;
 
 }
 
-.encabezado{
+header {
+
+    padding: 10px 0;
+
+}
+
+.encabezado {
 
     margin-top: 20px;
     margin-bottom: 11px;
@@ -110,12 +106,12 @@ header{
 }
 
 
-.titulo p{
+.titulo p {
     font-size: 40px;
 }
 
-.titulo-principal{
-    
+.titulo-principal {
+
     color: black;
     display: grid;
     align-content: space-evenly;
@@ -123,7 +119,7 @@ header{
 
 }
 
-main{
+main {
 
     display: grid;
     align-content: space-around;
@@ -131,18 +127,19 @@ main{
 
 }
 
-main .contenedor-textarea{
-   
+main .contenedor-textarea {
+
     margin-bottom: 20px;
 
 }
 
-.mensaje{
+.mensaje {
 
     position: relative;
     color: white;
 }
-.textIn{
+
+.textIn {
 
     outline: none;
     text-transform: lowercase;
@@ -154,18 +151,20 @@ main .contenedor-textarea{
     width: 416px;
     height: 357px;
     resize: none;
-   
-    margin-top: 20px;
-  
-}
-textarea::placeholder{
 
-    font-weight:lighter ;
+    margin-top: 20px;
+
+}
+
+textarea::placeholder {
+
+    font-weight: lighter;
     color: black;
     text-align: center;
-    
+
 }
-.textOut{
+
+.textOut {
 
     background-image: url("Munecosalida.png");
     background-position: center;
@@ -180,47 +179,48 @@ textarea::placeholder{
     width: 416px;
     height: 357px;
     resize: none;
-    
-    
+
+
 }
 
-.contenedor-botones{
+.contenedor-botones {
 
     padding-bottom: 20px;
-    
+
 }
 
-.botones1{
-    
+.botones1 {
+
     display: flex;
     justify-content: center;
 }
 
-.botones1 li{
-    
+.botones1 li {
+
     text-decoration: none;
     display: inline-block;
-       
+
 }
-.botones1 li .botones{
-   margin-left: 8px;
+
+.botones1 li .botones {
+    margin-left: 8px;
     border-radius: 5px;
-    width: 140px  ; 
+    width: 140px;
     height: 40px;
     background-color: blue;
     color: white;
 
 }
 
-.botones:hover{
- 
+.botones:hover {
+
     color: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 4px 16px rgb(172, 49, 49);
     transition: all 0.2s ease;
-  
+
 }
 
-#texto-copiado{
+#texto-copiado {
     visibility: hidden;
     min-width: 50px;
     margin-left: -125px;
@@ -234,21 +234,21 @@ textarea::placeholder{
     right: 0px;
     top: 0px;
     font-size: 17px;
-  }
-  
-  #texto-copiado.show {
+}
+
+#texto-copiado.show {
     visibility: visible;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  }
+}
 
-footer{
+footer {
 
-    position: relative; 
-    text-align: center;  
+    position: relative;
+    text-align: center;
     padding-top: 15px;
     padding-bottom: 20px;
-    
+
     color: white;
-   
+
 }
