@@ -166,7 +166,7 @@ textarea::placeholder {
 
 .textOut {
 
-    background-image: url("Munecosalida.png");
+    background-image: url("imagenes/Munecosalida.png");
     background-position: center;
     background-repeat: no-repeat;
     text-transform: lowercase;
