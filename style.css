@@ -85,7 +85,7 @@
 body {
 
     background: linear-gradient(#259797, #af9d84);
-    background-size: cover;
+    background-size: auto;
     width: 100%;
 
 }
@@ -243,6 +243,7 @@ textarea::placeholder {
 
 footer {
 
+    
     position: relative;
     text-align: center;
     padding-top: 15px;
