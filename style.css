@@ -147,7 +147,6 @@ main .contenedor-textarea {
     box-shadow: -5px 0px 3px;
     background-color: transparent;
     border-radius: 5px;
-    border-color: transparent;
     width: 416px;
     height: 357px;
     resize: none;
@@ -175,7 +174,6 @@ textarea::placeholder {
     box-shadow: 5px 0px 3px;
     background-color: transparent;
     border-radius: 5px;
-    border-color: transparent;
     width: 416px;
     height: 357px;
     resize: none;
