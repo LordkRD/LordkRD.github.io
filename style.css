@@ -1,42 +1,25 @@
-@media (max-width: 914px) {
+@media only screen and (max-device-width: 480px){
+
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    main .info{
+        float: initial;
+    }
 
     main .botones1 {
 
         display: flex;
         justify-content: flex-start;
-
-
-    }
-
-    header {
-
-        display: flex;
-        justify-content: center;
-
-    }
-
-    main .contenedor-textarea {
-
-        display: flex;
-        flex-direction: column;
-
-    }
-
-
-}
-
-@media only screen and (max-device-width: 570px){
-
-
-    main .botones1 {
-
-        display: flex;
-        justify-content: flex-start;
-
     }
 
     header .encabezado {
-        margin-top: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
     }
 
     main .contenedor-textarea {
@@ -50,6 +33,7 @@
         margin-left: 5px;
         width: 105px;
         height: 40px;
+        
     }
 
     main .contenedor-textarea .textIn {
@@ -61,8 +45,6 @@
     main .contenedor-textarea .textOut {
         width: 321px;
         height: 260px;
-
-
     }
 
     main .contenedor-botones {
@@ -70,36 +52,33 @@
     }
 
     main .contenedor-textarea .mensaje {
-
+        margin-bottom: 10px;
         text-align: center;
         font-size: smaller;
 
     }
 
-    body footer {
-        padding-bottom: 0px;
+    body footer .icon-link {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
     }
 
 }
 
-body {
-
-    background: linear-gradient(#259797, #af9d84);
-    background-size: auto;
-    width: 100%;
-
+html {
+    min-height: 100%;
 }
 
-header {
+body {
 
-    padding: 10px 0;
-
+    background: linear-gradient(#259797,#af9d84);
+    
 }
 
 .encabezado {
-
-    margin-top: 20px;
-    margin-bottom: 11px;
+    background:#259797;
     display: flex;
     position: relative;
     justify-content: flex-start;
@@ -107,7 +86,8 @@ header {
 }
 
 
-.titulo p {
+h1{
+    display: inline-block;
     font-size: 40px;
 }
 
@@ -121,7 +101,7 @@ header {
 }
 
 main {
-
+    
     display: grid;
     align-content: space-around;
     justify-content: space-evenly;
@@ -140,6 +120,12 @@ main .contenedor-textarea {
     color: white;
 }
 
+.info{
+
+    width: 15px;
+    float: left;
+
+}
 .textIn {
 
     outline: none;
@@ -151,7 +137,6 @@ main .contenedor-textarea {
     width: 416px;
     height: 357px;
     resize: none;
-
     margin-top: 20px;
 
 }
@@ -177,6 +162,7 @@ textarea::placeholder {
     border-radius: 5px;
     width: 416px;
     height: 357px;
+    margin-top: 10px;
     resize: none;
 
 
@@ -241,14 +227,10 @@ textarea::placeholder {
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-footer {
+footer .icon-link{
 
-    
-    position: relative;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 20px;
-
+    padding: 40px;
     color: white;
 
 }

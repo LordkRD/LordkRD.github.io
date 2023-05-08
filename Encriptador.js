@@ -11,12 +11,12 @@ function encriptar() {
 
 	document.getElementById("textIn").focus();
 	let textIn = document.getElementById("textIn").value;
-	let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // para quitar el acento
-	let sinCaracteres = sinAcento.replace(/[^a-z0-9 ]/g, '');
+	let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();; // para quitar el acento
+	let sinCaracteres = sinAcento.replace(/[^a-z0-9 ]/g, ''); // omitir caracteres especiales
 	let textDividido = Array.from(sinCaracteres); // para convertir el texto en un array
 
 	if (textDividido.length === 0) {
-		alert("Coloque un texto");
+		alert("Coloque un texto para encriptar");
 	} else {
 
 		for (let i = 0; i < textDividido.length; i++) {
@@ -27,7 +27,7 @@ function encriptar() {
 					let textOut = document.getElementById("textOut").value = textEncriptado;
 					document.getElementById("textOut").style.backgroundImage = 'none';
 					break;
-				}
+				}else{ textOut = textIn.value }
 			}
 		}
 

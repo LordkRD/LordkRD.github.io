@@ -3,7 +3,7 @@
 <html lang="es">
 
 <meta charset="UTF-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width">
 <head>
 
 
@@ -21,9 +21,9 @@
 
     <header>
         <div class="encabezado">
-            <h1><img id="logo" src="imagenes/logo.png"></h1>
+            
             <div class="titulo">
-                <p>Encriptador</p>
+                <img class="logo" src="imagenes/logo.png"><h1>Encriptador</h1>
             </div>
         </div>
 
@@ -34,10 +34,11 @@
 
             <div class="contenedor-textarea">
 
-                <div class="mensaje">&#128712; Solo letras minusculas y sin acento</div>
+                
+                <div class="mensaje"> <img class="info" src="imagenes/info.png">Solo letras minúsculas y sin acento</div>
 
-                <textarea id="textIn" class="textIn" placeholder="Escribe algo" autofocus></textarea>
-                <textarea id="textOut" readonly class="textOut" placeholder="Aquí veras el resultado"></textarea>
+                <textarea id="textIn" class="textIn" rows="10"   autofocus ></textarea>
+                <textarea id="textOut"  class="textOut" cols="50" rows="10" readonly placeholder="Aquí veras el resultado"></textarea>
                 
             </div>
             
@@ -59,7 +60,12 @@
 
     </main>
     <footer>
-        <p>&copy; Dinner Hernandez<br>
+        <div class="icon-link">
+            <a title="LinkedIn" href="https://www.linkedin.com/in/dinner-hernandez-ba9402271/"><img src="imagenes/icons8-linkedin-48.png"></img></a>
+            <a title="GitHub" href="https://github.com/LordkRD"><img src="imagenes/icons8-github-48.png"></img></a>
+            <p>&copy; Dinner Hernández<br>
+        </div>
+            
     </footer>
 </body>
 
