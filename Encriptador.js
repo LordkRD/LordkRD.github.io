@@ -6,12 +6,12 @@ La letra "u" es convertida para "ufat"
 */
 const codigos = ["enter", "imes", "ai", "ober", "ufat"];
 const vocales = ["e", "i", "a", "o", "u"];
-let textOut;
-let textIn;
+
+
 function encriptar() {
 
 	document.getElementById("textIn").focus();
-	textIn = document.getElementById("textIn").value;
+	let textIn = document.getElementById("textIn").value;
 	let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();; // para quitar el acento
 	let sinCaracteres = sinAcento.replace(/[^a-z0-9 ]/g, ''); // omitir caracteres especiales
 	let textDividido = Array.from(sinCaracteres); // para convertir el texto en un array
@@ -25,25 +25,25 @@ function encriptar() {
 				if (textDividido[i] == vocales[v]) {
 					textDividido.splice(i, 1, codigos[v]);
 					let textEncriptado = textDividido.join("");
-					textOut = document.getElementById("textOut").value = textEncriptado;
+					let textOut = document.getElementById("textOut").value = textEncriptado;
 					document.getElementById("textOut").style.backgroundImage = 'none';
 					break;
 				} else { textOut = document.getElementById("textOut").value = textDividido.join("") ; }
 			}
 		}
 
-		document.getElementById("textOut").setAttribute("title","Texto Original: "+"'"+textIn+"'" );	
+		//document.getElementById("textOut").setAttribute("title","Texto Original: "+"'"+textIn+"'" );	
 		document.getElementById("textIn").value = "";
 	}
 }
 
 function desencriptar() {
-
-	if (textIn.value == "") {
+	let textIn = document.getElementById("textIn").value;
+	if (textIn == "") {
 		alert("Coloque un texto encriptado");
 	} else {
 
-		let textIn = document.getElementById("textIn").value;
+		
 		let desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
 			replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
 
@@ -66,7 +66,7 @@ function copiarTexto(textOut) {
 		x.className = "show";
 		setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
-	}
+	}else{alert("no hay texto para copiar");}
 
 }
 
