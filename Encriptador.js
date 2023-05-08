@@ -6,16 +6,17 @@ La letra "u" es convertida para "ufat"
 */
 const codigos = ["enter", "imes", "ai", "ober", "ufat"];
 const vocales = ["e", "i", "a", "o", "u"];
-
+let textOut;
+let textIn;
 function encriptar() {
 
 	document.getElementById("textIn").focus();
-	let textIn = document.getElementById("textIn").value;
+	textIn = document.getElementById("textIn").value;
 	let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();; // para quitar el acento
 	let sinCaracteres = sinAcento.replace(/[^a-z0-9 ]/g, ''); // omitir caracteres especiales
 	let textDividido = Array.from(sinCaracteres); // para convertir el texto en un array
 
-	if (textDividido.length === 0) {
+	if (textIn == "") {
 		alert("Coloque un texto para encriptar");
 	} else {
 
@@ -24,32 +25,37 @@ function encriptar() {
 				if (textDividido[i] == vocales[v]) {
 					textDividido.splice(i, 1, codigos[v]);
 					let textEncriptado = textDividido.join("");
-					let textOut = document.getElementById("textOut").value = textEncriptado;
+					textOut = document.getElementById("textOut").value = textEncriptado;
 					document.getElementById("textOut").style.backgroundImage = 'none';
 					break;
-				}else{ textOut = textIn.value }
+				} else { textOut = document.getElementById("textOut").value = textDividido.join("") ; }
 			}
 		}
 
-
+		document.getElementById("textOut").setAttribute("title","Texto Original: "+"'"+textIn+"'" );	
 		document.getElementById("textIn").value = "";
 	}
 }
 
 function desencriptar() {
 
-	let textIn = document.getElementById("textIn").value;
-	let desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
-		replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
-	textOut = document.getElementById("textOut").value = desencriptador;
+	if (textIn.value == "") {
+		alert("Coloque un texto encriptado");
+	} else {
 
+		let textIn = document.getElementById("textIn").value;
+		let desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
+			replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+
+		textOut = document.getElementById("textOut").value = desencriptador;
+	}
 }
 
 function copiarTexto(textOut) {
 
 	let textGuardado = document.createElement("textarea");
 	textGuardado.value = document.getElementById("textOut").value;
-	
+
 	if (textGuardado.value != "") {
 
 		document.body.appendChild(textGuardado);

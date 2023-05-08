@@ -37,14 +37,14 @@
     }
 
     main .contenedor-textarea .textIn {
-        width: 321px;
-        height: 200px;
+        width: auto;
+        height: auto;
         margin-top: 1px;
     }
 
     main .contenedor-textarea .textOut {
-        width: 321px;
-        height: 260px;
+        width: auto;
+        height: auto;
     }
 
     main .contenedor-botones {
@@ -101,7 +101,7 @@ h1{
 }
 
 main {
-    
+    padding: 20px;
     display: grid;
     align-content: space-around;
     justify-content: space-evenly;
@@ -148,9 +148,12 @@ textarea::placeholder {
     text-align: center;
 
 }
-
+textarea[data-title]:hover:after{
+    color: red;
+    font-weight: bold;
+}
 .textOut {
-
+    
     background-image: url("imagenes/Munecosalida.png");
     background-position: center;
     background-repeat: no-repeat;
