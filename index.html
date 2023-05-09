@@ -2,15 +2,16 @@
 
 <html lang="es">
 
-<meta charset="UTF-8" >
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
+
 <head>
 
 
     <title> Encriptar Texto</title>
     <link rel="shortcut icon" href="imagenes/favicon.ico" />
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="style.css">
     <script defer="defer" src="Encriptador.js"></script>
 
 
@@ -21,51 +22,61 @@
 
     <header>
         <div class="encabezado">
-            
+
             <div class="titulo">
-                <img class="logo" src="imagenes/logo.png"><h1>Encriptador</h1>
+                <img class="logo" src="imagenes/logo.png">
+                <h1>Encriptador</h1>
             </div>
         </div>
 
     </header>
 
     <main>
-        
 
-            <div class="contenedor-textarea">
 
-                
-                <div class="mensaje"> <img class="info" src="imagenes/info.png">Solo letras minúsculas y sin acento</div>
+        <div class="contenedor-textarea">
 
-                <textarea id="textIn" class="textIn"  cols="10" rows="10"   autofocus placeholder="Escribe Aquí el Texto" ></textarea>
-                <textarea id="textOut"  class="textOut"  data-title="" cols="10" rows="11" readonly placeholder="Aquí veras el resultado"></textarea>
-            
-            </div>
-            
-            <div class="contenedor-botones">
-                <ul class="botones1">
+            <div class="mensaje"> <img class="info" src="imagenes/info.png">Solo letras minúsculas y sin acento</div>
+            <textarea id="textIn" class="textIn" cols="10" rows="10" autofocus
+                placeholder="Escribe Aquí el Texto"></textarea>
+            <textarea id="textOut" class="textOut" data-title="" cols="10" rows="11" readonly
+                placeholder="Aquí veras el resultado"></textarea>
+           
+        </div>
 
-                    <li>
-                        <button id="botonEncriptar" class="botones">Encriptar</button>
-                    </li>
-                    <li>
-                        <button id="botonDesencriptar" class="botones">Desencriptar</button>
-                    </li>
-                    <li>
-                        <button id="botonCopiar" class="botones">Copiar</button>
-                    </li>
-                </ul>
-            </div>
-            <div id="texto-copiado">Texto copiado</div>
+        <section>
+            <div id="textareaVacio">Por favor escribe un text para encriptar/desencriptar</div>
+            <div id="textoCopiado">Texto copiado</div>
+            <div id="textoNoCopiado">No hay texto para copiar</div>
+        </section>
+
+        <div class="contenedor-botones">
+            <ul class="botones1">
+
+                <li>
+                    <button id="botonEncriptar" class="botones">Encriptar</button>
+                </li>
+                <li>
+                    <button id="botonDesencriptar" class="botones">Desencriptar</button>
+                </li>
+                <li>
+                    <button id="botonCopiar" class="botones">Copiar</button>
+                </li>
+            </ul>
+        </div>
+
+
+
 
     </main>
     <footer>
         <div class="icon-link">
-            <a title="LinkedIn" href="https://www.linkedin.com/in/dinner-hernandez-ba9402271/"><img src="imagenes/icons8-linkedin-48.png"></img></a>
+            <a title="LinkedIn" href="https://www.linkedin.com/in/dinner-hernandez-ba9402271/"><img
+                    src="imagenes/icons8-linkedin-48.png"></img></a>
             <a title="GitHub" href="https://github.com/LordkRD"><img src="imagenes/icons8-github-48.png"></img></a>
             <p>&copy; Dinner Hernández<br>
         </div>
-            
+
     </footer>
 </body>
 

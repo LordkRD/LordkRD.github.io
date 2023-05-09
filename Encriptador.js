@@ -17,7 +17,9 @@ function encriptar() {
 	let textDividido = Array.from(sinCaracteres); // para convertir el texto en un array
 
 	if (textIn == "") {
-		alert("Coloque un texto para encriptar");
+		let mensajeTextareaVacio = document.getElementById("textareaVacio");
+		mensajeTextareaVacio.className = "show";
+		setTimeout(function () { mensajeTextareaVacio.className = mensajeTextareaVacio.className.replace("show", ""); }, 3000);
 	} else {
 
 		for (let i = 0; i < textDividido.length; i++) {
@@ -40,7 +42,9 @@ function encriptar() {
 function desencriptar() {
 	let textIn = document.getElementById("textIn").value;
 	if (textIn == "") {
-		alert("Coloque un texto encriptado");
+		let mensajeTextareaVacio = document.getElementById("textareaVacio");
+		mensajeTextareaVacio.className = "show";
+		setTimeout(function () { mensajeTextareaVacio.className = mensajeTextareaVacio.className.replace("show", ""); }, 3000);
 	} else {
 
 		
@@ -48,6 +52,7 @@ function desencriptar() {
 			replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
 
 		textOut = document.getElementById("textOut").value = desencriptador;
+
 	}
 }
 
@@ -62,11 +67,15 @@ function copiarTexto(textOut) {
 		textGuardado.select();
 		document.execCommand("copy");
 		document.body.removeChild(textGuardado);
-		let x = document.getElementById("texto-copiado");
-		x.className = "show";
-		setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+		let copi = document.getElementById("textoCopiado");
+		copi.className = "show";
+		setTimeout(function () { copi.className = copi.className.replace("show", ""); }, 3000);
 
-	}else{alert("no hay texto para copiar");}
+	}else{
+	let noCopi = document.getElementById("textoNoCopiado");
+	noCopi.className = "show";
+	setTimeout(function () { noCopi.className = noCopi.className.replace("show", ""); }, 3000);
+}
 
 }
 

@@ -100,7 +100,7 @@ h1{
 
 }
 
-main {
+main{
     padding: 20px;
     display: grid;
     align-content: space-around;
@@ -126,7 +126,7 @@ main .contenedor-textarea {
     float: left;
 
 }
-.textIn {
+.textIn{
 
     outline: none;
     text-transform: lowercase;
@@ -148,11 +148,8 @@ textarea::placeholder {
     text-align: center;
 
 }
-textarea[data-title]:hover:after{
-    color: red;
-    font-weight: bold;
-}
-.textOut {
+
+.textOut{
     
     background-image: url("imagenes/Munecosalida.png");
     background-position: center;
@@ -207,27 +204,73 @@ textarea[data-title]:hover:after{
     transition: all 0.2s ease;
 
 }
-
-#texto-copiado {
-    visibility: hidden;
+section{
+    position: relative;
+    display: flex;
+    top: -495px;
+    right: 4px;
+}
+#textoCopiado {
+    visibility:hidden ;
     min-width: 50px;
     margin-left: -125px;
-    background-color: #333;
+    background-color: rgba(19, 243, 19, 50%);
     color: #fff;
     text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
+    border-radius: 24px;
+    padding: 4px;
+    position: absolute;
     z-index: 1;
-    right: 0px;
-    top: 0px;
+    right: 150px;
+    top: 445px;
     font-size: 17px;
 }
 
-#texto-copiado.show {
+#textoCopiado.show {
     visibility: visible;
-    animation: fadein 0.1s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   
+}
+#textoNoCopiado {
+    visibility:hidden ;
+    min-width: 50px;
+    margin-left: -125px;
+    background-color: rgba(241, 0, 0, 50%);
+    color: #fff;
+    text-align: center;
+    border-radius: 24px;
+    padding: 4px;
+    z-index: 1;
+    right: 119px;
+    top: 445px;
+    font-size: 17px;
+    position: absolute;
+
+}
+
+#textoNoCopiado.show {
+    visibility: visible;
+
+}
+#textareaVacio {
+    visibility: hidden;
+    min-width: 50px;
+    margin-left: -125px;
+    background-color: rgba(241, 0, 0, 50%);
+    color: #fff;
+    text-align: center;
+    border-radius: 24px;
+    padding: 4px;
+    position: absolute;
+    z-index: 1;
+    left: 158px;
+    top: 445px;
+    font-size: 17px;
+    transition: all 0.2s ease;
+}
+
+#textareaVacio.show {
+    visibility: visible;
+
 }
 
 footer .icon-link{
