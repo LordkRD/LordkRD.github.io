@@ -12,14 +12,12 @@ function encriptar() {
 
 	document.getElementById("textIn").focus();
 	let textIn = document.getElementById("textIn").value;
-	let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();; // para quitar el acento
+	let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // para quitar el acento
 	let sinCaracteres = sinAcento.replace(/[^a-z0-9 ]/g, ''); // omitir caracteres especiales
-	let textDividido = Array.from(sinCaracteres); // para convertir el texto en un array
+	let textDividido = Array.from(sinAcento); // para convertir el texto en un array
 
 	if (textIn == "") {
-		let mensajeTextareaVacio = document.getElementById("textareaVacio");
-		mensajeTextareaVacio.className = "show";
-		setTimeout(function () { mensajeTextareaVacio.className = mensajeTextareaVacio.className.replace("show", ""); }, 3000);
+		mostrarMensaje("textareaVacio");
 	} else {
 
 		for (let i = 0; i < textDividido.length; i++) {
@@ -27,24 +25,23 @@ function encriptar() {
 				if (textDividido[i] == vocales[v]) {
 					textDividido.splice(i, 1, codigos[v]);
 					let textEncriptado = textDividido.join("");
-					let textOut = document.getElementById("textOut").value = textEncriptado;
+					document.getElementById("textOut").value = textEncriptado;
 					document.getElementById("textOut").style.backgroundImage = 'none';
 					break;
-				} else { textOut = document.getElementById("textOut").value = textDividido.join("") ; }
+				} else { document.getElementById("textOut").value = textDividido.join("") ; }
 			}
 		}
 
-		//document.getElementById("textOut").setAttribute("title","Texto Original: "+"'"+textIn+"'" );	
+		document.getElementById("textOut").setAttribute("title","Texto Original: "+"'"+textIn+"'" );	
 		document.getElementById("textIn").value = "";
 	}
+	verificar();
 }
 
 function desencriptar() {
 	let textIn = document.getElementById("textIn").value;
 	if (textIn == "") {
-		let mensajeTextareaVacio = document.getElementById("textareaVacio");
-		mensajeTextareaVacio.className = "show";
-		setTimeout(function () { mensajeTextareaVacio.className = mensajeTextareaVacio.className.replace("show", ""); }, 3000);
+		mostrarMensaje("textareaVacio");
 	} else {
 
 		
@@ -67,16 +64,32 @@ function copiarTexto(textOut) {
 		textGuardado.select();
 		document.execCommand("copy");
 		document.body.removeChild(textGuardado);
-		let copi = document.getElementById("textoCopiado");
-		copi.className = "show";
-		setTimeout(function () { copi.className = copi.className.replace("show", ""); }, 3000);
+		mostrarMensaje("textoCopiado");
 
 	}else{
-	let noCopi = document.getElementById("textoNoCopiado");
-	noCopi.className = "show";
-	setTimeout(function () { noCopi.className = noCopi.className.replace("show", ""); }, 3000);
+	mostrarMensaje("textoNoCopiado");
 }
 
+}
+
+function mostrarMensaje(mtext){
+	
+	let mensaje = document.getElementById(mtext);
+	mensaje.className = "show";
+	setTimeout(function () { mensaje.className = mensaje.className.replace("show", ""); }, 1000);
+	
+}
+
+document.getElementById("textIn").addEventListener("keypress",verificar);
+function verificar(e) {
+ 
+	// comprovamos con una expresion regular que el caracter pulsado sea
+	// una letra, numero o un espacio
+	if(e.key.match(/[a-zñ]/g)===null) {
+		mostrarMensaje("validarMayuscula")
+		// Si la tecla pulsada no es la correcta, eliminado la pulsación
+		e.preventDefault();
+	}
 }
 
 let botonCopiar = document.getElementById("botonCopiar");

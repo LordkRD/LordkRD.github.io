@@ -262,7 +262,7 @@ section{
     visibility: hidden;
     min-width: 50px;
     margin-left: -125px;
-    background-color: rgba(241, 0, 0, 50%);
+    background-color: rgba(0, 44, 241, 0.5);
     color: #fff;
     text-align: center;
     border-radius: 24px;
@@ -276,6 +276,28 @@ section{
 }
 
 #textareaVacio.show {
+    visibility: visible;
+
+}
+
+#validarMayuscula{
+    visibility: hidden;
+    min-width: 50px;
+    margin-left: -125px;
+    background-color: rgba(0, 44, 241, 0.5) !important;
+    color: #fff;
+    text-align: center;
+    border-radius: 24px;
+    padding: 4px;
+    position: absolute;
+    z-index: 1;
+    left: 158px;
+    top: 445px;
+    font-size: 17px;
+    transition: all 0.2s ease;
+}
+
+#validarMayuscula.show {
     visibility: visible;
 
 }
