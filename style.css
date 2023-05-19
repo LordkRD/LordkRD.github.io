@@ -75,8 +75,8 @@
 }
 
 html {
+    
     min-height: 100%;
-
 
 }
 
@@ -150,24 +150,6 @@ main .contenedor-textarea {
     position: fixed;
     color: black;
     font-weight: bold;
-}
-
-.mensaje:last-of-type {
-    animation: parpadear 2s infinite;
-}
-
-@keyframes parpadear {
-    0% {
-        opacity: 1.0;
-    }
-
-    50% {
-        opacity: 0.0;
-    }
-
-    100% {
-        opacity: 1.0;
-    }
 }
 
 .imgInfo {
