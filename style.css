@@ -129,7 +129,48 @@ main .contenedor-textarea {
     color: white;
 }
 
-.info {
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.mensajeInfo {
+    display: none;
+}
+
+.mensaje:hover+.mensajeInfo {
+    display: block;
+    position: fixed;
+    color: black;
+    font-weight: bold;
+}
+
+.mensaje:last-of-type {
+    animation: parpadear 2s infinite;
+}
+
+@keyframes parpadear {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.imgInfo {
 
     width: 15px;
     float: left;

@@ -35,11 +35,14 @@
 
         <div class="contenedor-textarea">
 
-            <div class="mensaje"> <img class="info" src="imagenes/info.png">Solo letras minúsculas y sin acentos</div>
-           <textarea id="textIn" class="textIn" cols="10" rows="10" autofocus
+            <div class="mensaje"> <img class="imgInfo" src="imagenes/info.png">
+                Solo letras minúsculas y sin acentos <i class="arrow down"></i></div>
+            <div class="mensajeInfo">Cuando pegues un texto se normalizara para poder ser encriptado</div>
+
+            <textarea id="textIn" class="textIn" cols="10" rows="10" autofocus
                 placeholder="Escribe Aquí tu texto" data-title="" ></textarea>
             <textarea id="textOut" class="textOut" data-title="" cols="10" rows="11" 
-                placeholder="Aquí veras el resultado"></textarea>
+                placeholder="Aquí veras el resultado" readonly></textarea>
            
         </div>
 
