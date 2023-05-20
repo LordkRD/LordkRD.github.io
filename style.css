@@ -75,7 +75,7 @@
 }
 
 html {
-    
+
     min-height: 100%;
 
 }
@@ -141,17 +141,6 @@ main .contenedor-textarea {
     -webkit-transform: rotate(45deg);
 }
 
-.mensajeInfo {
-    display: none;
-}
-
-.mensaje:hover+.mensajeInfo {
-    display: block;
-    position: fixed;
-    color: black;
-    font-weight: bold;
-}
-
 .imgInfo {
 
     width: 15px;
@@ -160,7 +149,7 @@ main .contenedor-textarea {
 }
 
 .textIn {
-
+    
     font-size: 20px;
     box-shadow: -5px 0px 3px;
     background-color: transparent;
@@ -246,98 +235,137 @@ textarea::placeholder {
 }
 
 section {
-    position: relative;
-    display: flex;
-    top: -495px;
-    right: 4px;
+    
+   
 }
 
 #textoCopiado {
     visibility: hidden;
-    min-width: 50px;
+    min-width: 250px;
     margin-left: -125px;
-    background-color: rgba(19, 243, 19, 50%);
+    background-color: #333;
     color: #fff;
     text-align: center;
-    border-radius: 24px;
-    padding: 4px;
-    position: absolute;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
     z-index: 1;
-    right: 150px;
-    top: 445px;
-    font-size: 17px;
+    left: 50%;
+    bottom: 30px;
 }
 
 #textoCopiado.show {
     visibility: visible;
-
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 #textoNoCopiado {
     visibility: hidden;
-    min-width: 50px;
+    min-width: 250px;
     margin-left: -125px;
-    background-color: rgba(241, 0, 0, 50%);
+    background-color: #333;
     color: #fff;
     text-align: center;
-    border-radius: 24px;
-    padding: 4px;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
     z-index: 1;
-    right: 119px;
-    top: 445px;
-    font-size: 17px;
-    position: absolute;
+    left: 50%;
+    bottom: 30px;
 
 }
 
 #textoNoCopiado.show {
     visibility: visible;
-
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 #textareaVacio {
     visibility: hidden;
-    min-width: 50px;
+    min-width: 250px;
     margin-left: -125px;
-    background-color: rgba(0, 44, 241, 0.5);
+    background-color: #333;
     color: #fff;
     text-align: center;
-    border-radius: 24px;
-    padding: 4px;
-    position: absolute;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
     z-index: 1;
-    left: 158px;
-    top: 445px;
-    font-size: 17px;
-    transition: all 0.2s ease;
+    left: 50%;
+    bottom: 30px;
 }
 
 #textareaVacio.show {
     visibility: visible;
-
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-#validarMayuscula {
+#validarTexto {
     visibility: hidden;
-    min-width: 50px;
+    min-width: 250px;
     margin-left: -125px;
-    background-color: rgba(0, 44, 241, 0.5) !important;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    border-radius: 24px;
-    padding: 4px;
-    position: absolute;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
     z-index: 1;
-    left: 225px;
-    top: 445px;
-    font-size: 17px;
-    transition: all 0.2s ease;
+    left: 50%;
+    bottom: 30px;
 }
 
-#validarMayuscula.show {
+#validarTexto.show {
     visibility: visible;
-
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
+
+#validarTextoEncriptado {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    
+}
+
+#validarTextoEncriptado.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
 
 footer .icon-link {
 

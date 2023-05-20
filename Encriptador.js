@@ -7,6 +7,10 @@ La letra "u" es convertida para "ufat"
 
 const codigos = ["enter", "imes", "ai", "ober", "ufat"];
 const vocales = ["e", "i", "a", "o", "u"];
+const caracteresEspeciales =["á", "é", "í", "ó", "ú", 'A', 'B', 'C', 'D', 'E',
+'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U',
+'V', 'W', 'X', 'Y', 'Z','!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', 
+'_', '+', '=', '{', '}', '[', ']', '\\', '|', ';', ':', '\'', '\"', ',', '.', '/']
 
 document.getElementById("textIn").addEventListener("input", normalizarTexto);
 
@@ -14,14 +18,37 @@ document.getElementById("textIn").addEventListener("input", normalizarTexto);
 function normalizarTexto() {
 
 	let textIn = document.getElementById("textIn").value;
+	let textGuardado = document.createElement("textarea");
+	textGuardado.value = document.getElementById("textIn").value;
+	textG = textGuardado.value;
+	textL= textGuardado.value;
+	textG.split(" ");
+	textL.split("");
 
-	if (textIn.value != "") {
+	for (let c = 0; c < codigos.length; c++) {
 
-		let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-		let sinCaracteresEspeciales = sinAcento.normalize("NFD").replace(/[^a-zñ0-9. ]/g, "");
-		document.getElementById("textIn").value = sinCaracteresEspeciales;
+		if (textG.includes(codigos[c])) {
+			mostrarMensaje("validarTextoEncriptado");
 
+		} else { }
 	}
+
+	for (let ce = 0; ce < caracteresEspeciales.length; ce++) {
+		if (textL.includes(caracteresEspeciales[ce])){
+
+			mostrarMensaje("validarTexto")
+			if (textIn.value != "") {
+
+				let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+				let sinCaracteresEspeciales = sinAcento.normalize("NFD").replace(/[^a-zñ0-9. ]/g, "");
+				document.getElementById("textIn").value = sinCaracteresEspeciales;
+		
+			}
+
+		}
+	}
+
+	
 
 }
 
@@ -30,7 +57,7 @@ document.getElementById("textIn").addEventListener("keypress", digitalLetras);
 function digitalLetras(e) {
 
 	if (e.key.match(/[a-zñ0-9 ]/g) === null) {
-		mostrarMensaje("validarMayuscula")
+		mostrarMensaje("validarTexto");
 		e.preventDefault();
 	}
 
@@ -61,23 +88,43 @@ function encriptar() {
 		document.getElementById("textIn").value = "";
 
 	}
-	
 
 }
 
 // Esta función se encarga de desencriptar un texto utilizando el algoritmo específico implementado. 
-// Es llamada cuando el botón 'botonDesencriptar' es presionado.
+// Es llamada cuando el botón 'botonDesencriptar' es presionado. aitai
 function desencriptar() {
-	let textIn = document.getElementById("textIn").value;
-	if (textIn == "") {
+	let textIn = document.getElementById("textIn");
+	let texto = textIn.value;
+	let textDividido = texto.split(" ");
+	let a = textDividido;
+
+	if (texto == "") {
 		mostrarMensaje("textareaVacio");
 	} else {
 
+		for (let i = 0; i < textDividido.length; i++) {
+			for (let c = 0; c < codigos.length; c++) {
+				if (texto.includes(codigos[c])) {
 
-		let desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
-			replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+					a = Array.from(texto.replace(codigos[c], " "));
+					const indice = texto.indexOf(codigos[c]);
+					a.splice(indice, 1, vocales[c])
+					let t = a.join("");
+					codigos.push(codigos[c]);
+					vocales.push(vocales[c]);
+					texto = t;
+					document.getElementById("textOut").value = t;
 
-		textOut = document.getElementById("textOut").value = desencriptador;
+
+				}
+			}
+		}
+
+		// let desencriptador = textIn.replace(/ai/gi, "a").replace(/enter/gi, "e").
+		// 	replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+
+		//textOut = document.getElementById("textOut").value = desencriptador;
 
 	}
 }
@@ -99,21 +146,19 @@ function copiarTexto(textOut) {
 		mostrarMensaje("textoCopiado");
 
 	} else {
-		
+
 		mostrarMensaje("textoNoCopiado");
 	}
-	
+
 
 }
 
-
-
 // Esta función muestra un mensaje en una ventana emergente con el texto pasado como parámetro.
 function mostrarMensaje(mtext) {
-
+	
 	let mensaje = document.getElementById(mtext);
 	mensaje.className = "show";
-	setTimeout(function () { mensaje.className = mensaje.className.replace("show", ""); }, 1000);
+	setTimeout(function () { mensaje.className = mensaje.className.replace("show", ""); }, 3000);
 
 }
 
