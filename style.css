@@ -64,13 +64,35 @@
         align-items: center;
     }
 
+    main section #textareaVacio{
+        padding: 14px;
+        left: 1%;
+
+    }
+    
     main section #textoCopiado {
-        right: 100px;
+
+        padding: 14px;
+        left: 14%;
     }
 
     main section #textoNoCopiado {
-        right: 72px;
+
+        padding: 14px;
+        left: 14%;
     }
+
+    main section #validarTexto{
+        padding: 14px;
+        left: 0;
+    }
+
+    main section #validarTextoEncriptado {
+        padding: 14px;
+        left: 11%;
+    }
+
+
 
 }
 
@@ -234,15 +256,9 @@ textarea::placeholder {
 
 }
 
-section {
-    
-   
-}
-
 #textoCopiado {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -250,19 +266,18 @@ section {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
+    left: 38%;
     bottom: 30px;
 }
 
 #textoCopiado.show {
     visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5s;
 }
 
 #textoNoCopiado {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -270,20 +285,20 @@ section {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
+    left: 38%;
     bottom: 30px;
 
 }
 
 #textoNoCopiado.show {
     visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5s;
 }
 
 #textareaVacio {
+    
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -291,19 +306,19 @@ section {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
+    left: 33.5%;
     bottom: 30px;
+
 }
 
 #textareaVacio.show {
     visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5s;
 }
 
 #validarTexto {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -311,19 +326,18 @@ section {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
+    left: 24.5%;
     bottom: 30px;
 }
 
 #validarTexto.show {
     visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5s;
 }
 
 #validarTextoEncriptado {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -331,38 +345,38 @@ section {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
+    left: 36%;
     bottom: 30px;
     
 }
 
 #validarTextoEncriptado.show {
     visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5s;
 }
 
 @keyframes fadein {
     from {
-        bottom: 0;
+        
         opacity: 0;
     }
 
     to {
-        bottom: 30px;
+       
         opacity: 1;
     }
 }
 
 @keyframes fadeout {
     from {
-        bottom: 30px;
-        opacity: 1;
+       
+        opacity: 0;
 
     }
 
     to {
-        bottom: 0;
-        opacity: 0;
+      
+        opacity: 1;
     }
 }
 
