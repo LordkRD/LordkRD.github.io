@@ -64,30 +64,30 @@
         align-items: center;
     }
 
-    main section #textareaVacio{
+    main .mensajesOcultos #textareaVacio{
         padding: 14px;
         left: 1%;
 
     }
     
-    main section #textoCopiado {
+    main .mensajesOcultos #textoCopiado {
 
         padding: 14px;
         left: 14%;
     }
 
-    main section #textoNoCopiado {
+    main .mensajesOcultos #textoNoCopiado {
 
         padding: 14px;
         left: 14%;
     }
 
-    main section #validarTexto{
+    main .mensajesOcultos #validarTexto{
         padding: 14px;
         left: 0;
     }
 
-    main section #validarTextoEncriptado {
+    main .mensajesOcultos #validarTextoEncriptado {
         padding: 14px;
         left: 11%;
     }
