@@ -49,12 +49,14 @@
 
     main .contenedor-botones {
         padding-bottom: 8px;
+        filter: blur(5px);
     }
 
     main .contenedor-textarea .mensaje {
         margin-bottom: 10px;
         text-align: center;
         font-size: smaller;
+        
 
     }
 
@@ -104,12 +106,13 @@ html {
 
 body {
 
-    background: linear-gradient(#259797, #af9d84);
-
+   /* background: linear-gradient(#259797, #af9d84); */
+   background: linear-gradient(#259797, #1a237e); 
+    
 }
 
 .encabezado {
-    background: #259797;
+    
     display: flex;
     position: relative;
     justify-content: flex-start;
@@ -142,6 +145,7 @@ main {
 main .contenedor-textarea {
 
     margin-bottom: 20px;
+   
 
 }
 
@@ -172,6 +176,7 @@ main .contenedor-textarea {
 
 .textIn {
     
+    outline: none;
     font-size: 20px;
     box-shadow: -5px 0px 3px;
     background-color: transparent;
