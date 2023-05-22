@@ -266,7 +266,7 @@ textarea::placeholder {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 38%;
+    left: 40%;
     bottom: 30px;
 }
 
@@ -285,7 +285,7 @@ textarea::placeholder {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 38%;
+    left: 40%;
     bottom: 30px;
 
 }
@@ -306,7 +306,7 @@ textarea::placeholder {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 33.5%;
+    left: 36.5%;
     bottom: 30px;
 
 }
@@ -326,13 +326,16 @@ textarea::placeholder {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 24.5%;
+    left: 29.5%;
     bottom: 30px;
 }
 
 #validarTexto.show {
     visibility: visible;
     animation: fadein 0.5s, fadeout 0.5s 5s;
+}
+span{
+    color: red;
 }
 
 #validarTextoEncriptado {
@@ -345,10 +348,12 @@ textarea::placeholder {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 36%;
+    left: 39.5%;
     bottom: 30px;
     
 }
+
+
 
 #validarTextoEncriptado.show {
     visibility: visible;
