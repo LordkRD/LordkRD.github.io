@@ -7,13 +7,12 @@ La letra "u" es convertida para "ufat"
 
 const codigos = ["enter", "imes", "ai", "ober", "ufat"];
 const vocales = ["e", "i", "a", "o", "u"];
-const caracteresEspeciales =["á", "é", "í", "ó", "ú", 'A', 'B', 'C', 'D', 'E',
-'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U',
-'V', 'W', 'X', 'Y', 'Z','!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', 
-'_', '+', '=', '{', '}', '[', ']', '\\', '|', ';', ':', '\'', '\"', ',', '.', '/']
+const caracteresEspeciales =["á", "é", "í", "ó", "ú", "A", "B", "C", "D", "E", "F", "G", "H", "I", 
+"J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "@", "#", 
+"$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "\\", "|", ";", ":", "'", 
+"\"", "/","0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 document.getElementById("textIn").addEventListener("input", normalizarTexto);
-
 // Esta función se encarga de asegurarse de que el texto esta normalizado (sin mayúsculas y caracteres especiales)
 function normalizarTexto() {
 
@@ -36,11 +35,12 @@ function normalizarTexto() {
 	for (let ce = 0; ce < caracteresEspeciales.length; ce++) {
 		if (textL.includes(caracteresEspeciales[ce])){
 
-			mostrarMensaje("validarTexto")
+			mostrarMensaje("validarTextoPegado")
+
 			if (textIn.value != "") {
 
 				let sinAcento = textIn.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-				let sinCaracteresEspeciales = sinAcento.normalize("NFD").replace(/[^a-zñ0-9. ]/g, "");
+				let sinCaracteresEspeciales = sinAcento.normalize("NFD").replace(/[^a-zñ., ]/g, "");
 				document.getElementById("textIn").value = sinCaracteresEspeciales;
 		
 			}
@@ -57,7 +57,7 @@ document.getElementById("textIn").addEventListener("keypress", digitalLetras);
 function digitalLetras(e) {
 
 	if (e.key.match(/[a-zñ0-9 ]/g) === null) {
-		mostrarMensaje("validarTexto");
+		mostrarMensaje("validarTextoDigitado");
 		e.preventDefault();
 	}
 
@@ -92,7 +92,7 @@ function encriptar() {
 }
 
 // Esta función se encarga de desencriptar un texto utilizando el algoritmo específico implementado. 
-// Es llamada cuando el botón 'botonDesencriptar' es presionado. aitai
+// Es llamada cuando el botón 'botonDesencriptar' es presionado.
 function desencriptar() {
 	let textIn = document.getElementById("textIn");
 	let texto = textIn.value;
