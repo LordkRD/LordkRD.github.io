@@ -5,8 +5,8 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
 */
 
-const codigos = ["enter", "imes", "ai", "ober", "ufat"];
-const vocales = ["e", "i", "a", "o", "u"];
+const codigos = ["ai", "enter", "imes", "ober", "ufat"];
+const vocales = ["a", "e", "i", "o", "u"];
 const caracteresEspeciales =["á", "é", "í", "ó", "ú", "A", "B", "C", "D", "E", "F", "G", "H", "I", 
 "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "@", "#", 
 "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "\\", "|", ";", ":", "'", 
